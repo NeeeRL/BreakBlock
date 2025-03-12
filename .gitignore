@@ -1,0 +1,13 @@
+Library/
+Temp/
+obj/
+*.csproj
+*.unityproj
+*.sln
+*.user
+*.dll
+*.pdb
+*.exe
+Packages/manifest.json
+Packages/packages-lock.json
+
