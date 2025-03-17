@@ -769,6 +769,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9647c25795a1413780523263d7100c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  game: {fileID: 2066236798}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -4695,7 +4696,9 @@ MonoBehaviour:
   gamestartUI: {fileID: 1881687635}
   ballControl: {fileID: 67331056}
   ball: {fileID: 67331050}
+  time: {fileID: 315639694}
   timeUI: {fileID: 2073718384}
+  isGameNow: 1
 --- !u!4 &2066236799
 Transform:
   m_ObjectHideFlags: 0
@@ -5120,7 +5123,7 @@ SceneRoots:
   - {fileID: 2027791846}
   - {fileID: 2073718388}
   - {fileID: 2075162347}
-  - {fileID: 2066236799}
   - {fileID: 2067905787}
   - {fileID: 652826527}
   - {fileID: 1881687639}
+  - {fileID: 2066236799}

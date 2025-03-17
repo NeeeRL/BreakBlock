@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,14 +10,16 @@ public class GameManager : MonoBehaviour
     public GameObject gamestartUI;
     public BallControl ballControl;
     public GameObject ball;
-    // public TimeTimer time;
+    public TimeTimer time;
     public GameObject timeUI;
     private bool isGameClear = false;
+    public bool isGameNow;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         ballControl = ball.GetComponent<BallControl>();
+        isGameNow = false;
     }
 
     // Update is called once per frame
@@ -30,6 +33,8 @@ public class GameManager : MonoBehaviour
                 Debug.Log("ゲームくりあ！！");
                 gamecelarUI.SetActive(true);
                 isGameClear = true;
+                ballControl.GameStop();
+                isGameNow = false;
             }
         }
     }
@@ -53,12 +58,16 @@ public class GameManager : MonoBehaviour
         gamestartUI.SetActive(false);
         ballControl.Gamestart();
         timeUI.SetActive(true);
+        isGameNow = true;
     }
     // ゲームオーバー
     public void GameOver() 
     {
         Debug.Log("ゲームオーバー");
         gameoverUI.SetActive(true);
+        ballControl.GameStop();
+        isGameNow = false;
+
     }
 
     public void GameRetry()

@@ -17,6 +17,14 @@ public class BallControl : MonoBehaviour
         myRidid = this.GetComponent<Rigidbody>();
         myRidid.AddForce((transform.forward + transform.right) * speed, ForceMode.VelocityChange);
     }
+    public void GameStop()
+    {
+        Rigidbody[] allRigidbodies = FindObjectsByType<Rigidbody>(FindObjectsSortMode.None);
+        foreach (Rigidbody rb in allRigidbodies)
+        {
+            rb.isKinematic = true;
+        }
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
