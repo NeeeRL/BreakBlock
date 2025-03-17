@@ -10,4 +10,4 @@ obj/
 *.exe
 Packages/manifest.json
 Packages/packages-lock.json
-
+.vscode/
