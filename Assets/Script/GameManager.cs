@@ -6,12 +6,17 @@ public class GameManager : MonoBehaviour
     public BlockControl[] block;
     public GameObject gameoverUI;    
     public GameObject gamecelarUI;
+    public GameObject gamestartUI;
+    public BallControl ballControl;
+    public GameObject ball;
+    // public TimeTimer time;
+    public GameObject timeUI;
     private bool isGameClear = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        ballControl = ball.GetComponent<BallControl>();
     }
 
     // Update is called once per frame
@@ -42,7 +47,13 @@ public class GameManager : MonoBehaviour
         return true;
     }
 
-
+    public void GameStart()
+    {
+        Debug.Log("ゲームスタート");
+        gamestartUI.SetActive(false);
+        ballControl.Gamestart();
+        timeUI.SetActive(true);
+    }
     // ゲームオーバー
     public void GameOver() 
     {

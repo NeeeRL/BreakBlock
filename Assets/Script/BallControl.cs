@@ -11,6 +11,9 @@ public class BallControl : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+    }
+    public void Gamestart()
+    {
         myRidid = this.GetComponent<Rigidbody>();
         myRidid.AddForce((transform.forward + transform.right) * speed, ForceMode.VelocityChange);
     }

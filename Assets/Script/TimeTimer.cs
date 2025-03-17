@@ -16,7 +16,10 @@ public class TimeTimer : MonoBehaviour
 		oldSeconds = 0;
 		startTime = Time.time;
 	}
- 
+	public void gamestart()
+	{
+		
+	}
 	void Update () {
  
 		//　Time.timeでの時間計測
