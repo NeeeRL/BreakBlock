@@ -8,6 +8,5 @@ obj/
 *.dll
 *.pdb
 *.exe
-Packages/manifest.json
-Packages/packages-lock.json
+.DS_store
 .vscode/
